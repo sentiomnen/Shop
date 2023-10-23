@@ -1,0 +1,34 @@
+body > main {
+    width: 1280px;
+    margin:  auto;
+    display: flex;
+    flex-direction: column;
+}
+body > main > header {
+    padding-top: 32px;
+    padding-bottom: 48px;
+    font-family: "IBM Plex Sans KR", sans-serif;
+    color: #525252;
+}
+main > article {
+    display: flex;
+    padding-top: 16px;
+    gap: 16px;
+}
+main > header p {
+    display: inline-block;
+    color: #525252;
+    font-weight: 400;
+    padding-top: 16px;
+}
+main > header p.date {
+    font-size: 1rem;
+    font-weight: 400;
+}
+main > header nav {
+    display: flex;
+    flex-direction: row-reverse;
+}
+main > header {
+    padding-bottom: 24px;
+}

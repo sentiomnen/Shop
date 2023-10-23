@@ -1,0 +1,32 @@
+/* Region Fluid */
+div.input-text.fluid, .fluid div.input-text {
+    flex: 1;
+    background-color: #ffffff;
+    color: #161616;
+    border-color: #8d8d8d;
+    border-bottom: solid 1px;
+    padding: 16px;
+}
+div.input-text.fluid::placeholder, .fluid div.input-text::placeholder {
+    color: #a8a8a8;
+}
+div.input-text.fluid:focus, .fluid div.input-text:focus {
+    border: solid 2px #0f62fe;
+}
+div.input-text.fluid.invalid, .fluid div.input-text.invalid {
+    border: solid 2px #da1e28;
+}
+div.input-text.fluid:disabled, .fluid div.input-text:disabled {
+    border-bottom: solid 1px #e0e0e0;
+    color: rgba(22, 22, 22, 25);
+}
+
+div.input-text.fluid .help, .fluid div.input-text .help {
+    visibility: hidden;
+    border-top: solid 1px #e0e0e0;
+}
+div.input-text.fluid.invalid .help, .fluid div.input-text.invalid .help {
+    visibility: visible;
+    color: #da1e28;
+}
+/* End Region Fluid */

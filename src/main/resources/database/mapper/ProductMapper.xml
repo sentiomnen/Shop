@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecom.shop.product.dao.ProductDAO">
+    <select id="count" resultType="int">
+        SELECT COUNT(*) FROM PRODUCT;
+    </select>
+
+    <!-- Region Action methods -->
+    <insert id="insert" parameterType="itemDTO">
+        INSERT INTO PRODUCT(NAME, DESCRIPTION, STOCK, PRICE, IMAGE, PATH)
+        VALUES (#{name}, #{description}, #{stock}, #{price}, #{image}, #{path});
+    </insert>
+    <update id="edit" parameterType="itemDTO">
+        UPDATE PRODUCT
+        SET NAME=#{name}, DESCRIPTION=#{description}, STOCK=#{stock}, PRICE=#{price}, IMAGE=#{image}, PATH=#{path}
+        WHERE NO=#{no};
+    </update>
+    <delete id="delete" parameterType="int">
+        DELETE FROM PRODUCT WHERE NO = #{value};
+    </delete>
+
+
+    <!-- End Region Action methods -->
+
+    <select id="listProduct" resultType="itemDTO" parameterType="map">
+        SELECT P.NO, P.LABEL, P.DESC, PRICE, STOCK, IMAGE, ROW_NUMBER() OVER () AS RN
+        FROM PRODUCT P
+        ORDER BY ${sort} ${dir} LIMIT #{page.start}, #{page.row};
+    </select>
+    <select id="getProduct" resultType="itemDTO" parameterType="int">
+        SELECT P.LABEL, P.DESC, PRICE, STOCK, IMAGE, PATH
+        FROM PRODUCT P
+        WHERE NO = #{value};
+    </select>
+
+    <!-- Region Managing methods -->
+    <insert id="addItem"    parameterType="itemDTO">
+        INSERT INTO PRODUCT (LABEL, DESC, IMAGE, STOCK, PRICE)
+        VALUES (#{label}, #{desc}, #{image}, #{stock}, #{price});
+    </insert>
+    <update id="editInfo"   parameterType="itemDTO">
+        UPDATE PRODUCT
+        SET LABEL = #{label}, DESC = #{desc}, IMAGE = #{image}
+        WHERE  NO = #{no};
+    </update>
+    <update id="editStock"   parameterType="itemDTO">
+        UPDATE PRODUCT
+        SET STOCK = #{stock}
+        WHERE  NO = #{no};
+    </update>
+    <update id="editPrice"   parameterType="itemDTO">
+        UPDATE PRODUCT
+        SET PRICE = #{price}
+        WHERE  NO = #{no};
+    </update>
+    <delete id="deleteItem" parameterType="itemDTO">
+        DELETE FROM PRODUCT
+        WHERE  NO = #{no};
+    </delete>
+    <!-- End Region Managing methods -->
+</mapper>

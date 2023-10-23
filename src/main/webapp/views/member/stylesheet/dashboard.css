@@ -1,0 +1,14 @@
+main header {
+    padding-bottom: 32px;
+}
+main article {
+    background-color: #fff;
+    padding: 0;
+}
+main article header {
+    padding-top: 16px;
+    border-bottom: solid 1px #e0e0e0;
+}
+main article header p {
+    padding: 16px;
+}

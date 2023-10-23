@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecom.shop.cart.dao.CartDAO">
+    <!-- Region Cart operations -->
+    <select id="getReceipt" resultType="cartDTO" parameterType="map">
+        SELECT C.NO, C.ID, C.PROGRESS, C.REGDATE,
+               C.REF, C.QUANTITY, P.PRICE, (C.QUANTITY * P.PRICE) AS TOTAL, P.LABEL AS LABEL,
+               ROW_NUMBER() OVER () AS RN
+        FROM CART C
+        INNER JOIN PRODUCT P ON P.NO = C.REF
+        WHERE ID = #{id} AND PROGRESS = 'CART'
+        ORDER BY ${sort} ${dir}
+        LIMIT #{page.start}, #{page.row}
+    </select>
+    <insert id="insertReceipt" parameterType="cartDTO">
+        INSERT INTO CART (ID, PROGRESS, REF, QUANTITY)
+        VALUES (#{id}, 'CART', #{ref}, #{quantity});
+    </insert>
+    <update id="updateReceipt" parameterType="cartDTO">
+        UPDATE CART
+        SET QUANTITY = ${quantity}
+        WHERE NO = #{no};
+    </update>
+    <delete id="deleteReceipt" parameterType="cartDTO">
+        DELETE FROM CART WHERE NO = #{no};
+    </delete>
+    <update id="orderReceipt" parameterType="cartDTO">
+        UPDATE CART
+        SET PROGRESS = 'ORDER'
+        WHERE NO = #{no};
+    </update>
+    <!-- End Region Cart operations -->
+</mapper>

@@ -1,0 +1,201 @@
+/*Region Header*/
+div.data-table {
+    flex: 1;
+}
+div.data-table header {
+    padding: 0;
+}
+div.data-table header h1 {
+    color: #262626;
+}
+div.data-table header h3 {
+    padding: 16px 16px 8px 16px;
+    color: #262626;
+}
+div.data-table header p {
+    color: #525252;
+    padding-left:  16px;
+    padding-right: 16px;
+}
+div.data-table header nav.toolbar {
+    padding-top: 24px;
+}
+div.data-table header nav.toolbar ul {
+    display: flex;
+    flex-direction: row-reverse;
+}
+/*End Region Header*/
+/*Region Shape per Layer*/
+/**** Layer 01 ****/
+div.data-table.layer-01 thead { background-color: #e0e0e0; }
+div.data-table.layer-01 thead th:hover  { background-color: #cacaca; }
+div.data-table.layer-01 thead th:focus  { border: 1px solid #0f62fe; }
+div.data-table.layer-01 thead th:active { background-color: #a8a8a8; }
+
+div.data-table.layer-01 tbody tr {
+    color: #525252;
+    border-bottom: solid 1px #c6c6c6;
+    cursor: pointer;
+}
+div.data-table.layer-01.zebra tbody tr:nth-child(even) { background-color: #e0e0e0; }
+div.data-table.layer-01 tbody tr:hover  { background-color: #cacaca; }
+div.data-table.layer-01 tbody tr:focus  { border: 1px solid #0f62fe; }
+div.data-table.layer-01 tbody tr:active { background-color: #cacaca; }
+/*End Region Shape per Layer*/
+/*Region Table*/
+div.data-table table {
+    display: flex;
+    flex-direction: column;
+}
+div.data-table tr {
+    display: flex;
+    justify-content: space-between;
+
+    border: none;
+}
+div.data-table th, div.data-table td {
+    flex: 1;
+    display: inline-block;
+    padding-left:  16px;
+    padding-right: 16px;
+    height: 40px;
+
+    line-height: 40px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+
+    text-align: center;
+}
+
+/*? Table Head*/
+div.data-table th {
+    font-weight: 500;
+}
+
+/*? Table Body*/
+div.data-table td {
+    font-weight: 400;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+/*? Table Format*/
+div.data-table th.no, div.data-table td.no {
+    flex:  0;
+    min-width: 64px;
+}
+div.data-table th.short, div.data-table td.short {
+    flex:  0;
+    min-width: 128px;
+}
+div.data-table th.name, div.data-table td.name {
+    flex: 1;
+    min-width: 128px;
+}
+div.data-table th.long, div.data-table td.long{
+    flex: 2;
+    text-align: left;
+}
+/*End Region Table*/
+/*Region Pagination table bar*/
+div.data-table .pagination {
+    display: flex;
+    flex-direction: row;
+    height: 48px;
+
+    color: #525252;
+    font-family: "IBM Plex Sans KR", sans-serif;
+    font-size: 16px;
+    line-height: 48px;
+}
+div.data-table .pagination li {
+    padding-left:  16px; padding-right: 16px;
+    width: fit-content;
+    border-right: solid 1px #c6c6c6;
+}
+div.data-table .pagination li:last-child { border: none; }
+div.data-table .pagination li.amount {  }
+div.data-table .pagination li.index  { flex: 2; }
+div.data-table .pagination li.page   {  }
+div.data-table .pagination li.button {
+    padding: 0; min-width: 48px;
+}
+/*End Region Pagination table bar*/
+
+
+
+
+.data_table .toolbar {
+    display: flex;
+    padding: 0;
+    flex-direction: row-reverse;
+}
+
+
+.data_table table {
+    border: none;
+}
+.data_table tr {
+    height: 48px;
+    font-size: 14px;
+    line-height: 48px;
+    curosr: pointer;
+}
+.data_table tbody {
+    background-color: #ffffff;
+}
+.data_table tbody tr {
+    border-bottom: solid 1px #e0e0e0;
+    font-weight: 400;
+}
+.data_table td {
+    border: none;
+    line-height: 48px;
+    text-align: center;
+}
+.data_table td.int {
+    width: 32px;
+}
+.data_table td.long {
+    width: 160px;
+}
+.data_table tr:hover {
+    background-color: #e8e8e8;
+}
+.data_table td.title {
+    text-align: start;
+    padding-left: 0;
+}
+
+
+.data_table .pagination {
+    display: flex;
+    line-height: 48px;
+    height: 48px;
+    background-color: #ffffff;
+}
+.data_table .pagination div {
+    display: inline-block;
+    border-right: solid 1px #e0e0e0;
+    height: 100%;
+
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.data_table .pagination div:last-child {
+    border: none;
+}
+
+.icon {
+    width: 20px;
+    height: 48px;
+    vertical-align: middle;
+    padding: 0 16px;
+}
+.icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.data_table .button {
+    height: 46px;
+}

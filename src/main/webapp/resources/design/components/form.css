@@ -1,0 +1,198 @@
+form {
+    flex: 1;
+}
+form header nav {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* Region Default form */
+form.default {
+    padding: 16px 16px 32px;
+}
+form.default h1 {
+    font-size: 28px;
+}
+form.default p {
+    margin-top: 4px;
+    margin-bottom: 40px;
+}
+
+form.default div.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+    wrap: wrap;
+}
+form.default div.section div {
+    flex: 1;
+}
+
+form.default div.input {
+    display: block;
+}
+
+input {
+    flex: 1;
+    line-height: 1.5rem;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 4px;
+    text-align: left;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    border: none;
+    border-bottom: solid 1px #8d8d8d;
+    outline: none;
+
+    background-color: #ffffff;
+}
+textarea {
+    flex: 1;
+    line-height: 1.5rem;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 4px;
+    text-align: left;
+    padding: 8px 16px;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    border: none;
+    border-bottom: solid 1px #8d8d8d;
+    outline: none;
+
+    background-color: #ffffff;
+    resize: none;
+}
+label {
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+    color: #525252;
+    margin-bottom: 8px;
+}
+cds-checkbox {
+    display: inline-flex;
+}
+
+form.default .button {
+    margin-top: 32px;
+}
+
+form.default .buttons {
+    display: flex;
+}
+form.default .buttons .button {
+    flex: 1;
+}
+
+/* End Region Default form */
+/* Region Fluid form */
+form.fluid {}
+form.fluid header {}
+form.fluid main   {}
+form.fluid footer {}
+
+/*! Structure */
+form.fluid {
+    flex: 2;
+    background-color: #fff;
+    padding: 16px 0 0;
+}
+form.fluid header {
+    margin: 0;
+    padding: 0 16px 40px;
+    border-bottom: solid 1px #e0e0e0;
+}
+form.fluid header p {
+    padding: 0;
+    margin:  0;
+    line-height: 1.25rem;
+}
+form.fluid main{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0 0 48px;
+    height: 100%;
+}
+form.fluid main .header {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+form.fluid section {
+    display: flex;
+}
+form.fluid section .button {
+    height: inherit;
+    margin: 0;
+}
+form.fluid section div {
+    border-right: solid 1px #8d8d8d;
+}
+form.fluid section div:last-child {
+    border-right: none;
+}
+form.fluid input { padding: 0; border: none; }
+form.fluid select, form.fluid radio{
+    margin-bottom: 24px;
+}
+form.fluid footer {
+    flex: 0;
+    padding:0;
+    margin: 0;
+    text-align: right;
+}
+form.fluid .button {
+    height: 64px;
+    line-height: 64px;
+}
+
+/*! Typography */
+form.fluid h1 {
+    font-size:  28px;
+    font-weight: 400;
+    padding: 0;
+}
+form.fluid label.name-tag {
+    font-size:  12px;
+    font-weight: 400;
+}
+form.fluid p {
+    font-size:  14px;
+    font-weight: 400;
+}
+form.fluid p.help {
+    font-size:  12px;
+    font-weight: 400;
+}
+form.fluid p.error {
+    font-size:  12px;
+    font-weight: 400;
+}
+/*! Custom */
+form.fluid div {
+    flex: 1;
+    background-color: #ffffff;
+    color: #161616;
+    border-color: #8d8d8d;
+    border-bottom: solid 1px;
+    padding: 16px;
+}
+form.fluid main h1 {
+}
+form.fluid main p {
+    line-height: 1.5rem;
+    font-size: 16px;
+    font-weight: 400;
+}
+/* End Region Fluid form */

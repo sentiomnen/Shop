@@ -1,0 +1,17 @@
+.tile {
+    min-width: 400px;
+    /*animation: transform 0.6s cubic-bezier(0.5, 0, 0.75, 0);*/
+    animation-name: fadeIn;
+    animation-duration: 0.6s;
+    animation-timing-function: cubic-bezier(0.5, 0, 0.75, 0);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

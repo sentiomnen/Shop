@@ -1,0 +1,125 @@
+@charset "UTF-8";
+header.global nav {
+    background-color: #262626;
+    color: #f4f4f4;
+    border-bottom: solid 1px #525252;
+}
+
+header.global nav div {
+    display: flex;
+    flex-direction: row;
+
+    padding: 0;
+    margin:  auto;
+
+    width: 1280px;
+    height:  48px;
+}
+header.global nav a {
+    color: #f4f4f4;
+
+    line-height: 48px;
+    padding-left:  16px;
+    padding-right: 16px;
+    text-decoration: none;
+}
+header.global nav a:visited {
+    color: #f4f4f4;
+}
+header.global nav .product-name {
+    padding-right: 32px;
+    line-height: 32px;
+
+    margin-top:    8px;
+    margin-bottom: 8px;
+
+    font-size:  16px;
+    font-weight: 600;
+}
+
+
+
+header.global nav.sub{
+    height: 24px;
+    line-height: 24px;
+    color: #f4f4f4;
+    border-bottom: solid 1px #393939;
+}
+header.global nav.sub div {
+    display: flex;
+    flex-direction: row-reverse;
+}
+header.global nav.sub a {
+    line-height: 24px;
+    font-size:   12px;
+}
+
+
+
+
+
+
+
+header.global .top {
+    display: flex;
+}
+
+header.global h1 {
+    display: inline-block;
+    flex: 1;
+    padding-left: 16px;
+}
+
+header.global nav#side {
+    display: inline-block;
+    margin-top: 8px;
+    margin-right: 16px;
+}
+header.global nav#side ul {
+    display: flex;
+}
+header.global nav#side li {
+    display: inline-block;
+    text-algign: center;
+    margin-left:  8px;
+    margin-right: 8px;
+}
+header.global nav#side li a {
+    color: #262626;
+}
+header.global nav#side li a:hover {
+    color: #161616;
+    font-weight: 450;
+}
+
+header.global nav#global {
+    margin-top: 32px;
+    display: block;
+    background-color: #262626;
+}
+header.global nav#global ul {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+header.global nav#global li {
+    display: inline-block;
+    text-align: center;
+}
+header.global nav#global li a {
+    display: inline-block;
+    line-height: 40px;
+    color: #f4f4f4;
+    padding-left:  32px;
+    padding-right: 32px;
+}
+header.global nav#global li a:hover {
+    background-color: #333333;
+    color: #ffffff;
+    font-weight: 450;
+}
+header.global nav#global li a:visited {
+    color: #f4f4f4;
+}
+

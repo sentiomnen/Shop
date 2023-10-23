@@ -1,0 +1,41 @@
+a, p, h1, h2, h3, h4, h5, h6 { font-family: 'IBM Plex Sans KR', sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+    line-break: auto;
+}
+
+h1 {
+    font-size:   54px;
+    line-height: 64px;
+    font-weight:  300;
+}
+h2 {
+    font-size:   42px;
+    line-height: 50px;
+    font-weight:  300;
+}
+h3 {
+    font-size:   32px;
+    line-height: 40px;
+    font-weight:  400;
+}
+h4 {
+    font-size:   28px;
+    line-height: 36px;
+    font-weight:  400;
+}
+h5 {
+    font-size:   20px;
+    line-height: 28px;
+    font-weight:  400;
+}
+
+a {
+    font-weight:  400;
+    font-size:   16px;
+    line-height: 24px;
+    color:    #0f62fe;
+    text-decoration: none;
+}
+a:hover   {color: #0043ce;}
+a:visited {color: #8a3ffc;}

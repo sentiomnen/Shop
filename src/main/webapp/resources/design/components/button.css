@@ -1,0 +1,130 @@
+.button {
+    display: inline-block;
+    padding: 0 64px 0 16px;
+    margin: 1px;
+    height: 40px;
+
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 40px;
+
+    outline: none;
+    border:  none;
+    cursor:  pointer;
+}
+.button.small {
+    padding: 0 16px 0 16px;
+    height: 32px;
+}
+/*Region Primary Button*/
+.button.primary {
+    color: #ffffff;
+    background-color: #0f62fe;
+    border: solid 1px #0f62fe;
+}
+.button.primary:hover {
+    background-color: #0353e9;
+}
+.button.primary:active {
+    background-color: #002d9c;
+}
+.button.primary:focus {
+    border: solid 1px #0f62fe;
+}
+.button.primary:disabled {
+    background-color: #c6c6c6;
+    color: #8d8d8d;
+}
+/*End Region Primary Button*/
+/*Region Secondary Button*/
+.button.secondary {
+    color: #ffffff;
+    background-color: #393939;
+    border: solid 1px #393939;
+}
+.button.secondary:hover {
+    background-color: #4c4c4c;
+}
+.button.secondary:active {
+    background-color: #6f6f6f;
+}
+.button.secondary:focus {
+    border: solid 1px #0f62fe;
+}
+.button.secondary:disabled {
+    background-color: #c6c6c6;
+    color: #8d8d8d;
+}
+/*End Region Secondary Button*/
+/*Region Tertiary Button*/
+.button.tertiary {
+    color: #0f62fe;
+    border: solid 1px #0f62fe;
+    background-color: transparent;
+}
+.button.tertiary:hover {
+    color: #ffffff;
+    background-color: #0353e9;
+}
+.button.tertiary:active {
+    background-color: #002d9c;
+}
+.button.tertiary:focus {
+    background-color: #0353e9;
+    border: solid 3px #0f63fe;
+}
+.button.tertiary:disabled {
+    background-color: transparent;
+    border: solid 1px #8d8d8d;
+}
+.button.tertiary.danger {
+    color: #da1e28;
+    border: solid 1px #da1e28;
+    background-color: transparent;
+}
+.button.tertiary.danger:hover {
+    color: #ffffff;
+    background-color: #ba1b23;
+}
+.button.tertiary.danger:active {
+    color: #ffffff;
+    background-color: #750e13;
+}
+.button.tertiary.danger:focus {
+    color: #ffffff;
+    background-color: #da1e28;
+    border: solid 3px #0f63fe;
+}
+.button.tertiary.danger:disabled {
+    background-color: transparent;
+    border: solid 1px #8d8d8d;
+}
+/*End Region Tertiary Button*/
+/*Region Ghost Button*/
+.button.ghost {
+    color: #0f62fe;
+    background-color: transparent;
+    border: solid 1px transparent;
+    padding: 0 16px 0 16px;
+    filter: invert(26%) sepia(81%) saturate(20%) hue-rotate(314deg) brightness(100%) contrast(91%);
+}
+.button.ghost:hover {
+    background-color: #8d8d8d1e;
+}
+.button.ghost:active {
+    background-color: #8d8d8d88;
+}
+.button.ghost:focus {
+    border: solid 3px #0f63fe;
+}
+.button.ghost:disabled {
+    color: #16161640;
+    filter: invert(8%) sepia(23%) saturate(5%) hue-rotate(314deg) brightness(97%) contrast(98%) opacity(25%);
+}
+.button svg {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+

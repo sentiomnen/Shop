@@ -1,0 +1,41 @@
+nav.tab {
+    display: block;
+}
+nav.tab ul {
+    display: flex;
+    flex-direction: row;
+}
+nav.tab.full li {
+    flex: 1;
+}
+nav.tab li {
+    display: inline-block;
+    background-color: #e0e0e0;
+    border: none;
+    border-right: solid 1px #8d8d8d;
+    height: 48px;
+
+    padding-left: 16px;
+    padding-right: 16px;
+}
+nav.tab li.selected {
+    background-color: #ffffff;
+    border: none;
+    border-top: solid 2px #0f62fe;
+}
+nav.tab li:last-child {
+    border-right: none;
+}
+nav.tab a, nav.tab a:hover, nav.tab a:focus, nav.tab a:active, nav.tab a:visited {
+    display: block;
+    padding-right: 48px;
+    color: #262626;
+    height: inherit;
+    line-height: 48px;
+
+    font-size: 14px;
+    font-weight: 400;
+}
+nav.tab li.selected a {
+    font-weight: 600;
+}

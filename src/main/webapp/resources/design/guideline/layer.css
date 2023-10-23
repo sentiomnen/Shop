@@ -1,0 +1,28 @@
+/*Region Layer 01*/
+.layer-01 { background-color: #f4f4f4; }
+.layer-hover-01 { background-color:  #e8e8e8; }
+.layer-active-01 { background-color: #c6c6c6; }
+.layer-selected-01 { background-color: #e0e0e0; }
+.layer-selected-hover-01 { background-color: #cacaca; }
+.layer-selected-inverse-01 { background-color: #161616; }
+.layer-selected-disable-01 { background-color: #8d8d8d; }
+
+.layer-accent-01 { background-color: #e0e0e0; }
+/*End Region Layer 01*/
+/*Region Layer 02*/
+.layer-02 { background-color: #ffffff; }
+.layer-hover-02 { background-color:  #e8e8e8; }
+.layer-active-02 { background-color: #c6c6c6; }
+.layer-selected-02 { background-color: #e0e0e0; }
+.layer-selected-hover-02 { background-color: #cacaca; }
+.layer-selected-inverse-02 { background-color: #161616; }
+.layer-selected-disable-02 { background-color: #8d8d8d; }
+
+.layer-accent-02 { background-color: #e0e0e0; }
+/*End Region Layer 02*/
+/*Region Layer 03*/
+.layer-03
+{
+
+}
+/*End Region Layer 03*/

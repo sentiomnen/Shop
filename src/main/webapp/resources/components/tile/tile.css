@@ -1,0 +1,63 @@
+.tile {
+    display: inline-flex;
+    flex: 1;
+    flex-direction: column;
+
+    min-height: 64px;
+    min-width: 128px;
+
+    overflow-wrap: break-word;
+    line-break: normal;
+    word-break: break-word;
+    text-wrap: balance;
+}
+.tile img {
+    flex: 0;
+    aspect-ratio: 4/3 auto;
+    margin-bottom: 14px;
+    max-width: 100%;
+    border-radius: 8px;
+}
+.tile header {
+    flex: 0;
+}
+.tile article {
+    flex: 1;
+    line-height: 1.5rem;
+    padding:    16px;
+
+    overflow-wrap: break-word;
+    line-break: normal;
+    word-break: break-word;
+    text-wrap: balance;
+}
+.tile p {
+    margin-top: 32px;
+    white-space: pre;
+    overflow-wrap: break-word;
+    line-break: normal;
+    word-break: break-word;
+    text-wrap: balance;
+}
+.tile nav {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.tile nav button {
+    height: 48px;
+}
+/*Region Layer 01*/
+.tile.layer-01 {
+    border: solid 1px #c6c6c6;
+}
+/*End Region Layer 01*/
+/*Region Layer 02*/
+.tile.layer-02 {
+    border: solid 1px #a8a8a8;
+}
+/*End Region Layer 02*/
+/*Region Layer 03*/
+.tile.layer-03 {
+    border: solid 1px #c6c6c6;
+}
+/*End Region Layer 03*/

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecom.shop.board.dao.BoardDAO">
+    <select id="getBoard" resultType="boardDTO" parameterType="pageDTO">
+        SELECT * FROM BOARD WHERE NO BETWEEN #{start} AND #{end};
+    </select>
+
+    <select id="listBoard" resultType="boardDTO" parameterType="map">
+        SELECT *, ROW_NUMBER() OVER (ORDER BY ${sort} ${dir}) AS 'RN' FROM BOARD ORDER BY ${sort} ${dir} LIMIT #{page.start}, #{page.row};
+    </select>
+    <select id="count" resultType="int">
+        SELECT COUNT(*) FROM BOARD;
+    </select>
+
+    <select id="viewBoard" resultType="boardDTO" parameterType="int">
+        SELECT *
+        FROM BOARD
+        WHERE NO=#{value};
+    </select>
+    <update id="updateView" parameterType="map">
+        UPDATE BOARD
+        SET VIEWS = VIEWS + #{view}
+        WHERE NO=#{no};
+    </update>
+</mapper>
