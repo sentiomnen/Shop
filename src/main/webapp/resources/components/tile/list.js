@@ -42,21 +42,24 @@ export class TileList {
         let i = 0;
         function draw() {
             if (i >= list.length) return;
-            let row  = list[i];
-            let tile = template.clone();
+            for (let j = 0; j < 3; j++) {
+                let row  = list[i+j];
+                let tile = template.clone();
 
-            tile.find('.value').each(function() {
-                if (this.tagName == 'INPUT') this.value = row[this.id];
-                else if (this.tagName == 'IMG') this.src = '/'+id+'/load.do?filename='+row[this.id];
-                else this.textContent = row[this.id];
-            });
-            tile.find('button').each(function() {
-                this.onclick = function() {
-                    location.href=this.getAttribute('goto') +'?no='+row["no"]};
-            })
+                tile.find('.value').each(function() {
+                    if (this.tagName == 'INPUT') this.value = row[this.id];
+                    else if (this.tagName == 'IMG') this.src = '/'+id+'/load.do?filename='+row[this.id];
+                    else this.textContent = row[this.id];
+                });
+                tile.find('button').each(function() {
+                    this.onclick = function() {
+                        location.href=this.getAttribute('goto') +'?no='+row["no"]};
+                })
 
-            i++;
-            body.append(tile);
+                body.append(tile);
+            }
+
+            i += 3;
             setTimeout(draw, 300);
         }
 
