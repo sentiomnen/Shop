@@ -1,5 +1,6 @@
 package com.ecom.shop.board.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -19,5 +20,6 @@ public class BoardDTO{
     private int no, ref, step, level;
     private String title, content, author, password, ip;
     private int views;
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date regdate;
 }
